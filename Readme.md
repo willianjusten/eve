@@ -1,6 +1,6 @@
-## Eve
+![Eve](https://raw.githubusercontent.com/willianjusten/eve/master/eve.jpg)
 
-![eve.jpg](Eve Bot)
+# Eve
 
 A simple bot to work with the new [Facebook Messenger API](https://messengerplatform.fb.com/), using [Wit.ai](https://wit.ai).
 
