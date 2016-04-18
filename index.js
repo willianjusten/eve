@@ -29,6 +29,7 @@ app.get('/fb', (req, res) => {
   if (!settings.FB_VERIFY_TOKEN) {
     throw new Error('missing FB_VERIFY_TOKEN');
   }
+
   if (req.query['hub.mode'] === 'subscribe' &&
     req.query['hub.verify_token'] === settings.FB_VERIFY_TOKEN) {
     res.send(req.query['hub.challenge']);
@@ -65,5 +66,6 @@ app.post('/fb', (req, res) => {
       );
     }
   }
+
   res.sendStatus(200);
 });

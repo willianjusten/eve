@@ -9,9 +9,9 @@ exports.fbMessage = (recipientId, msg, cb) => {
     method: 'POST',
     json: true,
     qs: { access_token: settings.FB_PAGE_TOKEN },
-    headers: {'Content-Type': 'application/json'},
+    headers: { 'Content-Type': 'application/json' }
   });
-    
+
   const opts = {
     form: {
       recipient: {

@@ -11,6 +11,7 @@ exports.actions = {
         if (err) {
           console.log('Oops! An error occurred while forwarding the response to', recipientId, ':', err);
         }
+
         cb();
       });
     } else {
@@ -18,9 +19,11 @@ exports.actions = {
       cb();
     }
   },
+
   merge: (sessionId, context, entities, message, cb) => {
     cb(context);
   },
+
   error: (sessionId, context, error) => {
     console.log(error.message);
   }

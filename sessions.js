@@ -13,7 +13,7 @@ exports.findOrCreateSession = (fbid) => {
 
   if (!sessionId) {
     sessionId = new Date().toISOString();
-    sessions[sessionId] = {fbid: fbid, context: {}};
+    sessions[sessionId] = { fbid: fbid, context: {} };
   }
 
   return sessionId;
