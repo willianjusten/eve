@@ -1,11 +1,13 @@
 'use strict';
 
+const settings = require('./settings.js');
+
 exports.fbMessage = (recipientId, msg, cb) => {
   const fbReq = request.defaults({
     uri: 'https://graph.facebook.com/me/messages',
     method: 'POST',
     json: true,
-    qs: { access_token: FB_PAGE_TOKEN },
+    qs: { access_token: settings.FB_PAGE_TOKEN },
     headers: {'Content-Type': 'application/json'},
   });
     
