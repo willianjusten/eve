@@ -10,6 +10,7 @@ const settings = require('./settings.js');
 const PORT = process.env.PORT || 8445;
 
 // Messenger Helper Functions
+const sessions = {};
 const fbMessage = require('./fb-connect.js').fbMessage;
 const getFirstMessagingEntry = require('./parser.js').getFirstMessagingEntry;
 
