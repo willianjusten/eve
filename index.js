@@ -10,12 +10,28 @@ const settings = require('./settings.js');
 const PORT = process.env.PORT || 8445;
 
 // Messenger Helper Functions
-const sessions = {};
 const fbMessage = require('./fb-connect.js').fbMessage;
 const getFirstMessagingEntry = require('./parser.js').getFirstMessagingEntry;
 
 // Our bot actions, session and definitions
-const findOrCreateSession = require('./session.js').findOrCreateSession;
+const sessions = {};
+findOrCreateSession = (fbid) => {
+  let sessionId;
+
+  Object.keys(sessions).forEach(k => {
+    if (sessions[k].fbid === fbid) {
+      sessionId = k;
+    }
+  });
+
+  if (!sessionId) {
+    sessionId = new Date().toISOString();
+    sessions[sessionId] = {fbid: fbid, context: {}};
+  }
+
+  return sessionId;
+};
+
 const actions = require('./bot.js').actions;
 const wit = new Wit(settings.WIT_TOKEN, actions);
 
