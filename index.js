@@ -15,7 +15,7 @@ const getFirstMessagingEntry = require('./parser.js').getFirstMessagingEntry;
 
 // Our bot actions, session and definitions
 const sessions = {};
-findOrCreateSession = (fbid) => {
+const findOrCreateSession = (fbid) => {
   let sessionId;
 
   Object.keys(sessions).forEach(k => {
