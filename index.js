@@ -19,7 +19,7 @@ const request = require('request');
 
 // When not cloning the `node-wit` repo, replace the `require` like so:
 // const Wit = require('node-wit').Wit;
-const Wit = require('../').Wit;
+const Wit = require('node-wit').Wit;
 
 // Webserver parameter
 const PORT = process.env.PORT || 8445;
