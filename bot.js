@@ -1,6 +1,7 @@
 'use strict';
 
-// Our bot actions, session and definitions
+const sessions = {};
+
 exports.findOrCreateSession = (fbid) => {
   let sessionId;
 
@@ -17,6 +18,8 @@ exports.findOrCreateSession = (fbid) => {
 
   return sessionId;
 };
+
+exports.sessions = sessions;
 
 exports.actions = {
   say: (sessionId, context, message, cb) => {
