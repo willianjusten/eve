@@ -13,7 +13,7 @@ const fbMessage = require('./fb-connect.js').fbMessage;
 const getFirstMessagingEntry = require('./parser.js').getFirstMessagingEntry;
 
 // Bot Stuff
-const findOrCreateSession = require('./settings.js').findOrCreateSession;
+const findOrCreateSession = require('./sessions.js').findOrCreateSession;
 const actions = require('./bot.js').actions;
 const sessions = require('./sessions.js').sessions;
 const wit = new Wit(settings.WIT_TOKEN, actions);
