@@ -13,25 +13,8 @@ const PORT = process.env.PORT || 8445;
 const fbMessage = require('./fb-connect.js').fbMessage;
 const getFirstMessagingEntry = require('./parser.js').getFirstMessagingEntry;
 
-// Our bot actions, session and definitions
 const sessions = {};
-const findOrCreateSession = (fbid) => {
-  let sessionId;
-
-  Object.keys(sessions).forEach(k => {
-    if (sessions[k].fbid === fbid) {
-      sessionId = k;
-    }
-  });
-
-  if (!sessionId) {
-    sessionId = new Date().toISOString();
-    sessions[sessionId] = {fbid: fbid, context: {}};
-  }
-
-  return sessionId;
-};
-
+const findOrCreateSession = require('./bot.js').findOrCreateSession;
 const actions = require('./bot.js').actions;
 const wit = new Wit(settings.WIT_TOKEN, actions);
 
