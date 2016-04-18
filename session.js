@@ -1,6 +1,7 @@
 'use strict';
 
 exports.findOrCreateSession = (fbid) => {
+  sessions = {};
   let sessionId;
 
   Object.keys(sessions).forEach(k => {
