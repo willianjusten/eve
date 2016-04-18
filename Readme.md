@@ -1,7 +1,5 @@
 ![Eve](eve.png)
 
-# Eve
-
 A simple bot to work with the new [Facebook Messenger API](https://messengerplatform.fb.com/), using [Wit.ai](https://wit.ai).
 
 ### Example
