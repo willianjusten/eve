@@ -21,6 +21,18 @@ Some steps from Messenger Setup like Webhooks, you have to configure Heroku firs
 npm install
 ```
 
+### Structure
+
+```sh
+├── Procfile  # tells to heroku what to do
+├── bot.js # our bot actions
+├── fb-connect.js # connection to facebook uses FB_PAGE_TOKEN
+├── index.js # express layer
+├── parser.js # our message parser
+├── sessions.js # find our define our sessionId
+└── settings.js # exports our environmet variables
+```
+
 ### Define variables on Heroku
 
 In order to work with Facebook and Wit Authentication, you have to create those environment variables on Heroku.
