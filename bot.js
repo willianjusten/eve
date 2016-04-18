@@ -1,5 +1,6 @@
 'use strict';
 
+const fbMessage = require('./fb-connect.js').fbMessage;
 const sessions = {};
 
 exports.findOrCreateSession = (fbid) => {
