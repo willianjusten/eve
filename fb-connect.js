@@ -1,5 +1,6 @@
 'use strict';
 
+const request = require('request');
 const settings = require('./settings.js');
 
 exports.fbMessage = (recipientId, msg, cb) => {

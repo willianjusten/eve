@@ -2,7 +2,6 @@
 
 const bodyParser = require('body-parser');
 const express = require('express');
-const request = require('request');
 const Wit = require('node-wit').Wit;
 const settings = require('./settings.js');
 
