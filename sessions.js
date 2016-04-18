@@ -1,3 +1,5 @@
+'use strict';
+
 const sessions = {};
 
 exports.findOrCreateSession = (fbid) => {
